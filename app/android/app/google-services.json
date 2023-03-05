@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "843010091732",
+    "project_id": "meetingapp-f4cad",
+    "storage_bucket": "meetingapp-f4cad.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:843010091732:android:0827e45c2907d089532941",
+        "android_client_info": {
+          "package_name": "com.example.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "843010091732-kete5c6sqv4sh5i23pjqnl5b0elf5i24.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.app",
+            "certificate_hash": "811639484451ae91765c7a72870256b8edbaa806"
+          }
+        },
+        {
+          "client_id": "843010091732-buvrhnf84pbj4t0q3j6p0t7epm9ufqqt.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCN-PvHyb2Dg3dQKyqOEZlIRbjSPoG5H4U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "843010091732-4s22pt2qhh73rs9h1f5sjcj1tbrs8go8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
