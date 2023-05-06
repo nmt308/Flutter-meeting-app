@@ -58,9 +58,9 @@ class Meeting extends StatelessWidget {
           ),
           Text('Create/Join Meetings with just a click',
               style: TextStyle(
-                fontSize: 18,
-                fontWeight: FontWeight.bold,
-              )),
+                  fontSize: 18,
+                  fontWeight: FontWeight.bold,
+                  color: Color.fromARGB(255, 65, 65, 65))),
         ],
       ))
     ]);

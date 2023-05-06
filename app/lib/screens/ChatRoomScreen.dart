@@ -85,6 +85,7 @@ class _ChatRoomScreenState extends State<ChatRoomScreen> {
       ),
       body: SafeArea(
         child: Container(
+          color: Colors.black,
           child: Column(
             children: [
               // This is where the chats will go
@@ -129,15 +130,14 @@ class _ChatRoomScreenState extends State<ChatRoomScreen> {
                                       decoration: BoxDecoration(
                                         color: (currentMessage.sender ==
                                                 widget.userModel.uid)
-                                            ? Colors.grey
-                                            : Theme.of(context)
-                                                .colorScheme
-                                                .secondary,
+                                            ? Colors.blue
+                                            : Colors.grey,
                                         borderRadius: BorderRadius.circular(5),
                                       ),
                                       child: Text(
                                         currentMessage.text.toString(),
                                         style: const TextStyle(
+                                          fontSize: 16,
                                           color: Colors.white,
                                         ),
                                       )),

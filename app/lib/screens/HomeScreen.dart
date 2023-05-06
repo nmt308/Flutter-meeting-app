@@ -45,16 +45,20 @@ class _HomeScreenState extends State<HomeScreen> {
     return Scaffold(
       resizeToAvoidBottomInset: false,
       appBar: AppBar(
-        backgroundColor: footerColor,
-        elevation: 0,
-        title: Text(titles[_page]),
+        backgroundColor: Color.fromARGB(245, 245, 245, 245),
+        title: Text(
+          titles[_page],
+          style: TextStyle(
+            color: Color.fromARGB(255, 65, 65, 65),
+          ),
+        ),
         centerTitle: true,
       ),
       body: pages[_page],
       bottomNavigationBar: BottomNavigationBar(
-          backgroundColor: footerColor,
-          selectedItemColor: Colors.white,
-          unselectedItemColor: Colors.grey,
+          backgroundColor: Color.fromARGB(245, 245, 245, 245),
+          selectedItemColor: Colors.blue,
+          unselectedItemColor: Color.fromARGB(255, 119, 119, 119),
           onTap: onPageChanged,
           type: BottomNavigationBarType.fixed,
           unselectedFontSize: 14,

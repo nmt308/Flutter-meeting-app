@@ -6,6 +6,7 @@ import 'package:google_sign_in/google_sign_in.dart';
 class AuthMethods {
   final FirebaseAuth _auth = FirebaseAuth.instance;
   final FirebaseFirestore _firestore = FirebaseFirestore.instance;
+  //publish ra ngoài
   Stream<User?> get authChanges => _auth.authStateChanges();
   User get user => _auth.currentUser!;
 

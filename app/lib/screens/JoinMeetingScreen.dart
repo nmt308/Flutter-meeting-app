@@ -53,76 +53,89 @@ class _JoinMeetingScreenState extends State<JoinMeetingScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        elevation: 0,
-        backgroundColor: backgroundColor,
+        leading: IconButton(
+          color: Color.fromARGB(255, 31, 30, 30),
+          icon: Icon(Icons.arrow_back_ios),
+          iconSize: 20.0,
+          onPressed: () {
+            Navigator.pop(context);
+          },
+        ),
+        backgroundColor: Colors.white,
         title: const Text(
           'Join a Meeting',
-          style: TextStyle(
-            fontSize: 18,
-          ),
+          style: TextStyle(fontSize: 18, color: Colors.black),
         ),
         centerTitle: true,
       ),
-      body: Column(children: [
-        SizedBox(
-          height: 60,
-          child: TextField(
-            controller: meetingIdController,
-            maxLines: 1,
-            textAlign: TextAlign.center,
-            keyboardType: TextInputType.number,
-            decoration: const InputDecoration(
-              fillColor: secondaryBackgroundColor,
-              filled: true,
-              border: InputBorder.none,
-              hintText: 'Room ID',
-              contentPadding: EdgeInsets.fromLTRB(16, 8, 0, 8),
+      body: Container(
+        color: Color.fromARGB(82, 206, 206, 206),
+        child: Column(children: [
+          SizedBox(height: 13),
+          SizedBox(
+            height: 60,
+            child: TextField(
+              controller: meetingIdController,
+              maxLines: 1,
+              textAlign: TextAlign.center,
+              keyboardType: TextInputType.number,
+              style: TextStyle(color: Colors.black),
+              decoration: const InputDecoration(
+                fillColor: Colors.white,
+                filled: true,
+                border: InputBorder.none,
+                hintText: 'Room ID',
+                hintStyle: TextStyle(color: Colors.black),
+                contentPadding: EdgeInsets.fromLTRB(16, 8, 0, 8),
+              ),
             ),
           ),
-        ),
-        SizedBox(
-          height: 60,
-          child: TextField(
-            controller: nameController,
-            maxLines: 1,
-            textAlign: TextAlign.center,
-            decoration: const InputDecoration(
-              fillColor: secondaryBackgroundColor,
-              filled: true,
-              border: InputBorder.none,
-              hintText: 'Name',
-              contentPadding: EdgeInsets.fromLTRB(16, 8, 0, 8),
+          SizedBox(
+            height: 60,
+            child: TextField(
+              controller: nameController,
+              maxLines: 1,
+              style: TextStyle(color: Colors.black),
+              textAlign: TextAlign.center,
+              decoration: const InputDecoration(
+                fillColor: Colors.white,
+                filled: true,
+                border: InputBorder.none,
+                hintText: 'Name',
+                hintStyle: TextStyle(color: Colors.black),
+                contentPadding: EdgeInsets.fromLTRB(16, 8, 0, 8),
+              ),
             ),
           ),
-        ),
-        const SizedBox(height: 10),
-        Custombutton(
-          onPressed: _joinMeeting,
-          text: "Join now",
-        ),
-        const SizedBox(height: 10),
-        Container(
-          margin: EdgeInsets.only(left: 24),
-          child: Align(
-            alignment: Alignment.centerLeft,
-            child: Text(
-              "Setting meeting",
-              style: TextStyle(fontSize: 16),
+          const SizedBox(height: 10),
+          Custombutton(
+            onPressed: _joinMeeting,
+            text: "Join now",
+          ),
+          const SizedBox(height: 10),
+          Container(
+            margin: EdgeInsets.only(left: 24),
+            child: Align(
+              alignment: Alignment.centerLeft,
+              child: Text(
+                "Setting meeting",
+                style: TextStyle(fontSize: 16, color: Colors.black),
+              ),
             ),
           ),
-        ),
-        const SizedBox(height: 20),
-        MeetingOption(
-          text: 'Mute Audio',
-          isMute: isAudioMuted,
-          onChange: onAudioMuted,
-        ),
-        MeetingOption(
-          text: 'Turn Off My Video',
-          isMute: isVideoMuted,
-          onChange: onVideoMuted,
-        ),
-      ]),
+          const SizedBox(height: 20),
+          MeetingOption(
+            text: 'Mute Audio',
+            isMute: isAudioMuted,
+            onChange: onAudioMuted,
+          ),
+          MeetingOption(
+            text: 'Turn Off My Video',
+            isMute: isVideoMuted,
+            onChange: onVideoMuted,
+          ),
+        ]),
+      ),
     );
   }
 

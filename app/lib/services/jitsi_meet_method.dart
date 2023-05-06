@@ -20,14 +20,15 @@ class JitsiMeetMethods {
       featureFlag.resolution = FeatureFlagVideoResolution
           .MD_RESOLUTION; // Limit video resolution to 360p
       String name;
-      //Nếu là người tạo meeting hiển thị tên người tạo
+      //Kiểm tra người dùng có nhập name khi join không
       if (username.isEmpty) {
         name = _authMethods.user.displayName!;
       } else {
-        //Hiển thị tên tham gia meeting
         name = username;
       }
+
       var options = JitsiMeetingOptions(room: roomName)
+        //giống như options.key = value
         ..userDisplayName = name
         ..userEmail = _authMethods.user.email
         ..userAvatarURL = _authMethods.user.photoURL

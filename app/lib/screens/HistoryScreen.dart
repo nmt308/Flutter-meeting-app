@@ -22,12 +22,17 @@ class HistoryMeetingScreen extends StatelessWidget {
             leading: Icon(
               Icons.history,
               size: 36,
+              color: Color.fromARGB(255, 65, 65, 65),
             ),
             title: Text(
               'Room Name: ${(snapshot.data! as dynamic).docs[index]['meetingName']}',
+              style: TextStyle(
+                  fontSize: 16, color: Color.fromARGB(255, 65, 65, 65)),
             ),
             subtitle: Text(
               'Joined on ${DateFormat.yMMMd().format((snapshot.data! as dynamic).docs[index]['createdAt'].toDate())}',
+              style: TextStyle(
+                  fontSize: 16, color: Color.fromARGB(255, 65, 65, 65)),
             ),
           ),
         );

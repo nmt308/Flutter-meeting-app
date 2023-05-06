@@ -75,16 +75,26 @@ class _MessageScreenState extends State<MessageScreen> {
                           },
                           leading: CircleAvatar(
                             backgroundImage: NetworkImage(
-                                targetUser.profilePhoto.toString()),
+                              targetUser.profilePhoto.toString(),
+                            ),
                           ),
-                          title: Text(targetUser.username.toString()),
+                          title: Text(
+                            targetUser.username.toString(),
+                            style: TextStyle(
+                              color: Color.fromARGB(255, 65, 65, 65),
+                            ),
+                          ),
                           subtitle: (chatRoomModel.lastMessage.toString() != "")
-                              ? Text(chatRoomModel.lastMessage.toString())
+                              ? Text(
+                                  chatRoomModel.lastMessage.toString(),
+                                  style: TextStyle(
+                                    color: Color.fromARGB(255, 65, 65, 65),
+                                  ),
+                                )
                               : Text(
                                   "Say hi to your new friend!",
                                   style: TextStyle(
-                                    color:
-                                        Theme.of(context).colorScheme.secondary,
+                                    color: Color.fromARGB(255, 65, 65, 65),
                                   ),
                                 ),
                         );

@@ -28,8 +28,8 @@ class MyApp extends StatelessWidget {
         "/home": (context) => const HomeScreen(),
         "/join-meeting": (context) => const JoinMeetingScreen()
       },
-      //?
       home: StreamBuilder(
+        //Lắng nghe luồng dữ liệu được publish từ AuthMethods
         stream: AuthMethods().authChanges,
         builder: (context, snapshot) {
           if (snapshot.connectionState == ConnectionState.waiting) {

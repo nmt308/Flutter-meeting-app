@@ -83,28 +83,42 @@ class _ContactScreenState extends State<ContactScreen> {
       resizeToAvoidBottomInset: false,
       body: Container(
         padding: const EdgeInsets.symmetric(
-          horizontal: 20,
-          vertical: 10,
+          horizontal: 15,
+          vertical: 20,
         ),
         child: Column(
           children: [
             Row(
               children: [
                 Flexible(
-                    child: TextField(
-                  controller: searchController,
-                  decoration: InputDecoration(
-                    labelText: "Email Address",
-                    suffixIcon: IconButton(
-                      icon: Icon(Icons.search),
-                      onPressed: () {
-                        setState(() {
-                          showImage = false;
-                        });
-                      },
+                  child: TextField(
+                    style: TextStyle(color: Colors.black),
+                    controller: searchController,
+                    decoration: InputDecoration(
+                      labelText: "Email Address",
+                      suffixIcon: IconButton(
+                        icon: Icon(Icons.search),
+                        color: Colors.grey,
+                        onPressed: () {
+                          setState(() {
+                            showImage = false;
+                          });
+                        },
+                      ),
+                      labelStyle: TextStyle(color: Colors.grey),
+                      filled: true,
+                      fillColor: Colors.grey[200],
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(10),
+                        borderSide: BorderSide.none,
+                      ),
+                      focusedBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(10),
+                        borderSide: BorderSide(color: Colors.grey),
+                      ),
                     ),
                   ),
-                )),
+                ),
               ],
             ),
             Visibility(
@@ -113,14 +127,20 @@ class _ContactScreenState extends State<ContactScreen> {
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Image.asset("assets/images/message2.png"),
+                    Image.asset(
+                      "assets/images/message2.png",
+                      width: 200,
+                      height: 200,
+                    ),
                     const SizedBox(
                       height: 40,
                     ),
                     const Text(
                       "Find your contact and chat now",
-                      style:
-                          TextStyle(fontSize: 18, fontWeight: FontWeight.w500),
+                      style: TextStyle(
+                          fontSize: 18,
+                          fontWeight: FontWeight.w500,
+                          color: Color.fromARGB(255, 50, 50, 50)),
                     )
                   ],
                 ),
@@ -163,9 +183,23 @@ class _ContactScreenState extends State<ContactScreen> {
                                 NetworkImage(searchedUser.profilePhoto!),
                             backgroundColor: Colors.grey[500],
                           ),
-                          title: Text(searchedUser.username!),
-                          subtitle: Text(searchedUser.email!),
-                          trailing: Icon(Icons.keyboard_arrow_right),
+                          title: Text(
+                            searchedUser.username!,
+                            style: TextStyle(
+                              color: Colors.black,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                          subtitle: Text(
+                            searchedUser.email!,
+                            style: TextStyle(
+                              color: Colors.grey[700],
+                            ),
+                          ),
+                          trailing: Icon(
+                            Icons.keyboard_arrow_right,
+                            color: Colors.grey[700],
+                          ),
                         );
                       } else {
                         return Text("");

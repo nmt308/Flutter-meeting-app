@@ -47,7 +47,8 @@ class _SettingScreenState extends State<SettingScreen> {
                 children: [
                   Text(
                     name,
-                    style: TextStyle(fontSize: 16),
+                    style: TextStyle(
+                        fontSize: 16, color: Color.fromARGB(255, 65, 65, 65)),
                     textAlign: TextAlign.center,
                   ),
                   const SizedBox(
@@ -56,6 +57,8 @@ class _SettingScreenState extends State<SettingScreen> {
                   Text(
                     email,
                     textAlign: TextAlign.center,
+                    style: TextStyle(
+                        fontSize: 16, color: Color.fromARGB(255, 65, 65, 65)),
                   ),
                 ],
               ),
@@ -71,8 +74,7 @@ class _SettingScreenState extends State<SettingScreen> {
       const Text(
         "© 2023 - Flutter Meeting Video Communications",
         textAlign: TextAlign.center,
-        style:
-            TextStyle(fontSize: 14, color: Color.fromARGB(119, 248, 247, 247)),
+        style: TextStyle(fontSize: 14, color: Color.fromARGB(255, 65, 65, 65)),
       ),
     ]);
   }
